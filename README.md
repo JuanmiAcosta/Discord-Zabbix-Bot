@@ -1,40 +1,40 @@
 # Discord-Zabbix-Bot
 
-This repository contains the code for a Discord bot that notifies server events using the Zabbix API. The bot is developed by Juan Miguel Acosta Ortega and is designed to efficiently monitor and manage server problems via Zabbix.
+Este repositorio contiene el código para un bot de Discord que notifica eventos del servidor utilizando la API de Zabbix. El bot ha sido desarrollado por Juan Miguel Acosta Ortega y está diseñado para monitorear y gestionar eficientemente los problemas del servidor a través de Zabbix.
 
-## Motivation
-The project aims to create a bot that can effectively notify server events and manage alerts using the Zabbix API and Discord.
+## Motivación
+El proyecto tiene como objetivo crear un bot que pueda notificar eficazmente eventos del servidor y gestionar alertas utilizando la API de Zabbix y Discord.
 
-## Features
+## Características
 
-- Integration with Zabbix API for retrieving and modifying server configurations.
-- Discord bot functionality for notifying server events and managing alerts.
+- Integración con la API de Zabbix para recuperar y modificar configuraciones del servidor.
+- Funcionalidad de bot de Discord para notificar eventos del servidor y gestionar alertas.
 
-- Use of py-zabbix library for making API requests in Python.
-- Practical implementation steps and potential applications for the technology.
+- Uso de la biblioteca py-zabbix para realizar solicitudes a la API en Python.
+- Pasos de implementación práctica y posibles aplicaciones para la tecnología.
 
-## Installation
-To use the Discord-Zabbix-Bot, you will need to install the following dependencies:
+## Instalación
+Para utilizar el Discord-Zabbix-Bot, deberás instalar las siguientes dependencias:
 
 - Discord
 - py-zabbix
 
-## Usage
+## Uso
 
-1. Access the Discord Developer Portal and create a new application.
-2. Specify the type of authorization and necessary permissions.
+1. Accede al Portal de Desarrolladores de Discord y crea una nueva aplicación.
+2. Especifica el tipo de autorización y los permisos necesarios.
 
-3. Create the URL of the bot and select the required permissions, including MESSAGE CONTENT INTENT.
-4. Save the link to invite the bot to a Discord server and obtain the unique token.
+3. Crea la URL del bot y selecciona los permisos requeridos, incluyendo MESSAGE CONTENT INTENT.
+4. Guarda el enlace para invitar al bot a un servidor de Discord y obtén el token único.
 
-5. Install the required dependencies using pip.
-6. Run the bot to start receiving notifications for server events.
+5. Instala las dependencias necesarias usando pip.
+6. Ejecuta el bot para comenzar a recibir notificaciones de eventos del servidor.
 
-## Conclusion
-With the integration of the Zabbix API and Discord, the possibilities for developing applications are endless. This project demonstrates the potential for creating innovative solutions using these two powerful tools.
-
-
-**Author:** Juan Miguel Acosta Ortega
+## Conclusión
+Con la integración de la API de Zabbix y Discord, las posibilidades para desarrollar aplicaciones son infinitas. Este proyecto demuestra el potencial para crear soluciones innovadoras utilizando estas dos poderosas herramientas.
 
 
-**Code Repository:** [GitHub - Discord-Zabbix-Bot](https://github.com/JuanmiAcosta/Discord-Zabbix-Bot)
+**Autor:** Juan Miguel Acosta Ortega
+
+
+**Repositorio de código:** [GitHub - Discord-Zabbix-Bot](https://github.com/JuanmiAcosta/Discord-Zabbix-Bot)
