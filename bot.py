@@ -1,6 +1,5 @@
 import discord
 import responses
-
 import private 
 
 async def send_message(message, user_message, is_private):
