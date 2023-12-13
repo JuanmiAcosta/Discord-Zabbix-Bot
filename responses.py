@@ -13,6 +13,7 @@ def eventos() -> str:
         'sortorder': 'DESC',
         'selectRelatedObject': ['objectid']
     })
+    zapi.user.logout()
 
     events = result['result'] # Lista de eventos
 
@@ -25,35 +26,42 @@ def eventos() -> str:
     type = [None] * num_events
 
     # Obtener name, severity y el relatedObject -> triggerid , de los 5 eventos recogidos
+    cont=0
 
     for event in events:
-        name[0] = event['name'] 
-        severity[0] = int(event['severity'])
-        triggerid[0] = event['relatedObject']['triggerid']
+
+        name[cont] = event['name'] 
+        severity[cont] = int(event['severity'])
+        triggerid[cont] = event['relatedObject']['triggerid']
 
         # rellenar el type según severity : 0-Not clasified, 1-Information, 2-Warning, 3-Average, 4-High, 5-Disaster
 
-        if severity[0] == 0:
-            type[0] = 'Not clasified'
-        elif severity[0] == 1:
-            type[0] = 'Information'
-        elif severity[0] == 2:
-            type[0] = 'Warning'
-        elif severity[0] == 3:
-            type[0] = 'Average'
-        elif severity[0] == 4:
-            type[0] = 'High'
-        elif severity[0] == 5:
-            type[0] = 'Disaster'
+        if severity[cont] == 0:
+            type[cont] = 'Not clasified'
+        elif severity[cont] == 1:
+            type[cont] = 'Information'
+        elif severity[cont] == 2:
+            type[cont] = 'Warning'
+        elif severity[cont] == 3:
+            type[cont] = 'Average'
+        elif severity[cont] == 4:
+            type[cont] = 'High'
+        elif severity[cont] == 5:
+            type[cont] = 'Disaster'
+        
+        cont += 1
 
     # Crear un string con los eventos recogidos
 
     eventos = ""
+    eventos += '\n Eventos del servidor más recientes: \n'
+    triggerids_conocidos = [None] * num_events
 
     for i in range(num_events):
-        eventos += f'{name[i]}: {severity[i]}:{type[i]} relacionado con el trigger {triggerid[i]} \n'
-
-    zapi.user.logout()
+        # si el trigerid ya está en triggerids conocidos no añadimos el evento
+        if triggerid[i] not in triggerids_conocidos:
+            triggerids_conocidos[i] = triggerid[i]
+            eventos += f'{name[i]}: Tipo de evento:{type[i]} relacionado con el trigger {triggerid[i]} \n'
 
     return eventos
 
