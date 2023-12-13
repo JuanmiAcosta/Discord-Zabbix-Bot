@@ -2,6 +2,10 @@
 
 Este repositorio contiene el código para un bot de Discord que notifica eventos del servidor utilizando la API de Zabbix. El bot ha sido desarrollado por Juan Miguel Acosta Ortega y está diseñado para monitorear y gestionar eficientemente los problemas del servidor a través de Zabbix.
 
+
+https://github.com/JuanmiAcosta/Discord-Zabbix-Bot/blob/main/captura.png?raw=true
+
+
 ## Motivación
 El proyecto tiene como objetivo crear un bot que pueda notificar eficazmente eventos del servidor y gestionar alertas utilizando la API de Zabbix y Discord.
 
